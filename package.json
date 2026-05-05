@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/volcysalony/crud_flashcards/issues"
   },
-  "homepage": "https://github.com/volcysalony/crud_flashcards#readme"
+  "homepage": "https://github.com/volcysalony/crud_flashcards#readme",
+  "dependencies": {
+    "prompt-sync": "^4.2.0"
+  }
 }
