@@ -5,16 +5,18 @@ import baralhos from "./baseDeDados/baralhos.js";
 import flashcards from "./baseDeDados/flashcards.js";
 import listarBaralhos from "./listar/listarBaralhos.js";
 import listarFlashcards from "./listar/listarFlashcards.js";
+import listarPorBaralho from "./listar/listarPorBaralho.js";
 import adicionarBaralho from "./adicionar/adicionarBaralho.js";
 import adicionarFlashcard from "./adicionar/adicionarFlashcard.js";
 import atualizarBaralho from "./atualizar/atualizarBaralho.js";
 import atualizarFlashcard from "./atualizar/atualizarFlashcards.js";
 import removerBaralho from "./remover/removerBaralho.js";
 import removerFlashcard from "./remover/removerFlashcard.js";
+import buscarPorPergunta from "./buscar/buscarPorPergunta.js";
 
-let opcao = "0"
+let opcao
 
-while (opcao !== "9") {
+while (opcao !== "0") {
     console.log("\n--- MENU ---");
     console.log("1 - Listar Baralhos");
     console.log("2 - Listar Flashcards");
@@ -24,7 +26,9 @@ while (opcao !== "9") {
     console.log("6 - Atualizar Flashcard");
     console.log("7 - Remover Baralho");
     console.log("8 - Remover Flashcard");
-    console.log("9 - Sair");
+    console.log("9 - Listar Flashcards por Baralho");
+    console.log("10 - Buscar por Pergunta");
+    console.log("0 - Sair")
 
     opcao = prompt("Escolha uma opção: ");
 
@@ -73,9 +77,19 @@ while (opcao !== "9") {
             removerFlashcard(idRemoverF, flashcards);
             break;
 
-        case "9":
-            console.log("Saindo...");
-            break;
+    case "9":
+        const idBaralhoBusca = Number(prompt("ID do baralho: "));
+        listarPorBaralho(flashcards, idBaralhoBusca);
+        break;
+
+    case "10":
+        const termo = prompt("Digite parte da pergunta: ");
+        buscarPorPergunta(flashcards, termo);
+        break;
+
+    case "0":
+        console.log("Saindo...");
+        break;
 
         default:
             console.log("Opção inválida!");
