@@ -99,7 +99,7 @@ crud_flashcards/
   GitHub: https://github.com/volcysalony
 
 * **Enzo G. Biaco**
-  GitHub: https://github.com/volcysalony
+  GitHub: https://github.com/enzoreal00
 
 
 ---
