@@ -77,21 +77,21 @@ while (opcao !== "0") {
             removerFlashcard(idRemoverF, flashcards);
             break;
 
-    case "9":
-        const idBaralhoBusca = Number(prompt("ID do baralho: "));
-        listarPorBaralho(flashcards, idBaralhoBusca);
-        break;
-
-    case "10":
-        const termo = prompt("Digite parte da pergunta: ");
-        buscarPorPergunta(flashcards, termo);
-        break;
-
-    case "0":
-        console.log("Saindo...");
-        break;
-
-        default:
-            console.log("Opção inválida!");
+        case "9":
+            const idBaralhoBusca = Number(prompt("ID do baralho: "));
+            listarPorBaralho(flashcards, idBaralhoBusca);
+            break;
+    
+        case "10":
+            const termo = prompt("Digite parte da pergunta: ");
+            buscarPorPergunta(flashcards, termo);
+            break;
+    
+        case "0":
+            console.log("Saindo...");
+            break;
+    
+            default:
+                console.log("Opção inválida!");
     }
 }
