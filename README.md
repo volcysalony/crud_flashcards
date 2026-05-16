@@ -116,6 +116,6 @@ Durante o desenvolvimento deste projeto, foram aplicados conceitos como:
 
 ---
 
-## 📌 Observações
+## 📌 -- Observações --
 
 Projeto desenvolvido para fins educacionais.
